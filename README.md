@@ -53,28 +53,15 @@ KRA_PASSWORD=your_password_here
 
 ## 🚀 How to Run
 Clone the repo:
-
-bash
-Copy
-Edit
 git clone https://github.com/Mwangi-ke/kra-invoice-scraper.git
 cd kra-invoice-scraper
+
 Install dependencies:
+pip install selenium python-dote
 
-bash
-Copy
-Edit
-pip install selenium python-dotenv
 Create a .env file with your credentials:
-
-ini
-Copy
-Edit
 KRA_USERNAME=your_username
 KRA_PASSWORD=your_password
-Run the script:
 
-bash
-Copy
-Edit
+Run the script:
 python scraper.py
