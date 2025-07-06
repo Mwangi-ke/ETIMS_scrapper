@@ -6,6 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from selenium.webdriver.support import expected_conditions as EC
 
+from dotenv import load_dotenv
+
 import os
 
 import shutil
@@ -21,6 +23,13 @@ import re
 download_dir = os.path.join(os.path.expanduser("~"), "Downloads", "APRIL_MAY")
 
 os.makedirs(download_dir, exist_ok=True)
+
+
+# Load credentials from .env file
+load_dotenv()
+
+KRA_USERNAME = os.getenv("KRA_USERNAME")
+KRA_PASSWORD = os.getenv("KRA_PASSWORD")
 
 
 
@@ -59,9 +68,8 @@ driver.get("https://etims.kra.go.ke/app/ebm/indexMain")
 
 # --------- Login ---------
 
-driver.find_element(By.NAME, "mbrId").send_keys("P051601081W")
-
-driver.find_element(By.NAME, "mbrPwd").send_keys("FileClaims@2024")
+driver.find_element(By.NAME, "mbrId").send_keys(KRA_USERNAME)
+driver.find_element(By.NAME, "mbrPwd").send_keys(KRA_PASSWORD)
 
 driver.find_element(By.ID, "loginBtn").click()
 
