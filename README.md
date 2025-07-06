@@ -38,18 +38,7 @@ dotenv	Secure credential management
 re	Invoice number detection and pattern matching
 os, shutil, time	File handling, waits, and system operations
 
-## 🔐 Security & Credential Management
-Credentials (username & password) are stored securely in a .env file and loaded via the python-dotenv library.
-This ensures no sensitive data is exposed in version control.
 
-.env structure:
-
-env
-Copy
-Edit
-KRA_USERNAME=your_username_here
-KRA_PASSWORD=your_password_here
-🔒 The .env file is excluded via .gitignore.
 
 ## 🚀 How to Run
 Clone the repo:
@@ -61,6 +50,7 @@ Install dependencies:
 pip install selenium python-dote
 
 Create a .env file with your credentials:
+
 KRA_USERNAME=your_username
 
 KRA_PASSWORD=your_password
