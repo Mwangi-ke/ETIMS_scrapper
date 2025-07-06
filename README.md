@@ -29,17 +29,6 @@ This tool was used internally to:
 
 
 
-## 🧠 Tech Stack
-
-Component	Purpose
-Python	Core scripting logic
-Selenium	Browser automation
-dotenv	Secure credential management
-re	Invoice number detection and pattern matching
-os, shutil, time	File handling, waits, and system operations
-
-
-
 ## 🚀 How to Run
 Clone the repo:
 git clone https://github.com/Mwangi-ke/kra-invoice-scraper.git
